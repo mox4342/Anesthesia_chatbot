@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-medical-primary: #0369a1;
+  --color-medical-secondary: #0ea5e9;
+  --color-medical-accent: #38bdf8;
+  --color-medical-warning: #fbbf24;
+  --color-medical-danger: #ef4444;
+  --color-medical-success: #10b981;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 min-h-screen;
+}
+
+.btn-primary {
+  background-color: var(--color-medical-primary);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-medical-secondary);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
